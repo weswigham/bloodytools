@@ -87,8 +87,8 @@ class SecondaryDistributionSimulator(Simulator):
         self, simulation_group: Simulation_Group, data_dict: dict
     ) -> None:
         step_size = self.settings.secondary_distributions_step_size
-        lower_threshold = 10  # percent
-        upper_threshold = 70  # percent
+        lower_threshold = 0  # percent
+        upper_threshold = 100  # percent
         possible_steps = list(range(lower_threshold, upper_threshold + 1, step_size))
         step_combinations = itertools.product(possible_steps, repeat=4)
         distribution_multipliers = [
